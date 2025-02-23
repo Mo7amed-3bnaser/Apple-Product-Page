@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: #000;
+    background-image: radial-gradient(circle at center, #333, #000);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+ul li{
+    display: inline-block;
+    list-style: none;
+    transition: 0.5s;
+}
+ul li:hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+.content .text {
+    width: 40%;
+    color: #fff;
+}
+.content .text h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+.content .text p {
+    font-size: 18px;
+    margin: 20px 0 30px;
+}
+.content .text a {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+}
+.content .text a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+}
+.content .img {
+    width: 25%;
+}
+.content .img img {
+    width: 80%;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.2));
+    transition: transform 0.5s ease;
+}
+.content .img img:hover {
+    transform: scale(1.05) rotate(-5deg);
+}
+.icons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.1);
+    padding: 15px 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+.icons img {
+    width: 50px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.5s;
+}
+.icons img:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content {
+        width: 90%;
+    }
+    header {
+        width: 90%;
+    }
+    .content .img {
+        width: 35%;
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 0;
+    }
+    .content .text {
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+    }
+    .content .img {
+        width: 45%;
+        order: 1;
+    }
+    .content .img img {
+        width: 100%;
+    }
+    ul li a {
+        font-size: 16px;
+        margin: 0 15px;
+    }
+    .icons {
+        position: fixed;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+    }
+    .logo {
+        width: 40px;
+    }
+    ul li a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+    .content {
+        padding-top: 20px;
+    }
+    .content .text h2 {
+        font-size: 28px;
+    }
+    .content .text p {
+        font-size: 15px;
+        margin: 15px 0 20px;
+        padding: 0 20px;
+    }
+    .content .img {
+        width: 65%;
+    }
+    .icons {
+        padding: 12px 20px;
+        bottom: 15px;
+    }
+    .icons img {
+        width: 40px;
+        margin: 0 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    header ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    ul li a {
+        font-size: 13px;
+        margin: 0 8px;
+    }
+    .content .text h2 {
+        font-size: 24px;
+    }
+    .content .img {
+        width: 75%;
+    }
+    .content .text a {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .icons {
+        padding: 10px 15px;
+        bottom: 10px;
+    }
+    .icons img {
+        width: 35px;
+        margin: 0 3px;
+    }
+}
+
+/* إضافة للتأكد من أن الصفحة تعمل بشكل جيد على الشاشات الطويلة */
+@media (min-height: 800px) {
+    .content {
+        padding-top: 40px;
+    }
+    .icons {
+        bottom: 40px;
+    }
+}
